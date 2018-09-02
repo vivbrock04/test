@@ -21,7 +21,7 @@
 
 	        stage('Build') {
 	            steps {
-	                mvn -Dmaven.test.failure.ignore=true install
+	                mvn clean verify
 	            }
 	            post {
 	                success {
