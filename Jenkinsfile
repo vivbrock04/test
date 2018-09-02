@@ -21,13 +21,19 @@
 
 	        stage('Build') {
 	            steps {
-	                mvn clean verify
+	                sh 'mvn clean verify'
 	            }
 	            post {
 	                success {
 	                    junit 'target/surefire-reports/**/*.xml'
 	                }
 	            }
+	        }
+			stage('Sonar') {
+	            steps {
+	                sh 'mvn sonar:sonar'
+	            }
+	            
 	        }
 
 
