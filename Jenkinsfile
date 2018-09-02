@@ -2,7 +2,7 @@
 	    agent any
 	    tools {
 	        maven 'Maven_3_5_4'
-	        jdk 'JDK_6'
+	        jdk 'JDK_8'
 	    }
 
 	    stages {
